@@ -1,0 +1,95 @@
+https://www.tutorialspoint.com/matlab/matlab_syntax.htm
+
+a = 3.14
+%this will print the value and convert the output as a string, with 2 decimal places
+disp(sprintf(“2 decimals :0.2f”, a)
+
+%generate matrix with normal distribution – mean 0.5 and range 0 to 1
+rand(1, 3) 
+
+%generate matrix with Gaussian distribution – mean 0 and variance 1
+randn(1, 3) 
+
+
+%get the length of the longest dimension 
+length(matrix)
+
+%gives all the variable in the workspace
+who
+
+%variable with details 
+whos
+
+% delete a variable
+clear variable_name
+
+%save a file a variable ‘v’
+save file_1.mat v
+save file_1.txt v ascii %save as text (ascii) 	
+
+% append a row
+a = [1 2 3; 4 5 6]
+a = [a, [7; 8; 9]]
+
+
+% append a column
+b = [1 2 3; 4 5 6]
+b = [b, [7; 9]]
+
+%put all elements in a vector
+A(:)
+
+
+%element wise operation
+1 ./ a % reciprocal
+1 .^ a %square
+log(a)
+abs(a)
+exp(a)
+
+%transpose 
+a’
+
+%value and index
+[val, ind] = max(a) % column wise
+[val, ind] = max(a, 1) % column wise
+[val, ind] = max(a, 2) % row wise
+
+%saving a plot
+cd 'C:\Users\Harshal Garg\desktop'; print -dpng 'myplot.png'
+
+%to closed the opened plot
+close
+
+%while break and if else 
+v = ones(10, 1) 
+i = 1
+while true,
+	v(i) = 999;
+	i = i + 1;
+	if i == 6,
+		break;
+	end;
+end;
+
+
+%create a function 
+function y = squareThisNumber(x)
+ 
+y = x^2;
+
+end
+
+%add a path (different from your current working directory)
+addpath(C:\Users\Harshal Garg')
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% a big advantage that it can return 2 values 
+function [y, z] = squareandcubeThisNumber(x)
+ 
+y = x^2;
+z = x^3;
+end
+
+ 
